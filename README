@@ -1,0 +1,41 @@
+# LabRat Docker Nginx
+
+This is a simple static website project served with Nginx inside Docker.
+
+## How to Build the Docker Image
+
+1. Open a terminal in the project folder `labrat`.
+2. Build the Docker image:
+
+```bash
+docker build -t labrat-nginx .
+```
+
+## How to Run the Container
+```bash
+docker run --name labrat-nginx -p 8080:80 labrat-nginx
+```
+The website will be accessible at: http://localhost:8080
+
+##  How to Update the Website
+> Make changes to your HTML, CSS, or other files inside the labrat folder.
+
+Rebuild the Docker image:
+
+```bash
+docker build -t labrat-nginx .
+```
+
+### Stop and remove the old container (if running):
+
+```bash
+docker rm -f labrat-nginx
+```
+
+Start a new container with the updated image:
+
+```bash
+docker run --name labrat-nginx -p 8080:80 labrat-nginx
+```
+
+Now your updates are live! 🎉
