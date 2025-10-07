@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LabRat</title>
+  <style>
+    /* Reset minimal */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(135deg, #0f172a 0%, #0b1020 50%, #071022 100%);
+      color: #e6eef8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .card {
+      width: min(880px, 94%);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 2.4rem;
+      box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.02);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .8rem;
+    }
+
+    .logo {
+      display: inline-grid;
+      place-items: center;
+      width: 3.2rem;
+      height: 3.2rem;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #ffd166, #ef476f);
+      color: #061226;
+      font-weight: 700;
+      box-shadow: 0 6px 18px rgba(239, 71, 111, 0.18);
+      transform: rotate(-8deg);
+    }
+
+    p.lead {
+      color: rgba(230, 238, 248, 0.85);
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: .36rem .6rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      font-size: .82rem;
+      color: rgba(230, 238, 248, 0.8);
+      margin-top: .8rem;
+    }
+
+    footer {
+      margin-top: 1.4rem;
+      font-size: .82rem;
+      color: rgba(230, 238, 248, 0.6);
+    }
+
+    /* petite animation pour le logo */
+    @keyframes pop {
+      0% {
+        transform: rotate(-8deg) scale(.96);
+        opacity: .0
+      }
+
+      60% {
+        transform: rotate(-8deg) scale(1.04);
+        opacity: 1
+      }
+
+      100% {
+        transform: rotate(-8deg) scale(1);
+      }
+    }
+
+    .logo {
+      animation: pop .6s ease both;
+    }
+
+    /* accessible: focus */
+    :focus {
+      outline: 3px solid rgba(255, 255, 255, 0.06);
+      outline-offset: 3px;
+    }
+
+    code {
+      background-color: #1e1e2f;
+      /* fond sombre type terminal */
+      color: #f8f8f2;
+      /* texte clair */
+      padding: 0.2em 0.4em;
+      /* un peu d'espace autour */
+      border-radius: 5px;
+      /* coins arrondis */
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.95em;
+    }
+
+    /* optionnel : légèrement surligné au hover */
+    code:hover {
+      background-color: #27293d;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card" role="main">
+    <h1>
+      <span class="logo">LR</span>
+      LabRat
+    </h1>
+
+    <p class="lead">
+      Hey, bienvenue dans le laboratoire ! 🧪<br>
+      Cette page statique est servie par Nginx. 🚀<br>
+      Porjet placé dans : <code>C:\0_projets\nginx\labrat\index.html</code> .. oublie pas de start ton conteneur. 💾<br>
+      Amuse-toi bien ! 🔬
+    </p>
+
+    <div class="badge">
+      Server
+    </div>
+
+    <div class="badge">
+      Docker
+    </div>
+
+    <div class="badge">
+      Fun
+    </div>
+  </main>
+</body>
